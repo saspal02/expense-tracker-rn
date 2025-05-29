@@ -8,10 +8,12 @@ import { enableScreens } from 'react-native-screens';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { DeviceEventEmitter, PermissionsAndroid } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import SplashScreen from './src/app/pages/SplashScreen';
 
 enableScreens(true);
 
 export type RootStackParamList = {
+  Splash: undefined;
   Login: undefined;
   SignUp: undefined;
   Home: undefined;
@@ -88,23 +90,21 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
-  <Stack.Screen
-    name="Login"
-    component={Login}
-    options={{ headerTitleAlign: 'center' }}
-  />
-  <Stack.Screen
-    name="SignUp"
-    component={SignUp}
-    options={{ headerTitleAlign: 'center' }}
-  />
+        <Stack.Navigator initialRouteName="Splash">
+  <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
+  <Stack.Screen name="Login" component={Login} options={{ headerTitleAlign: 'center' }} />
+  <Stack.Screen name="SignUp" component={SignUp} options={{ headerTitleAlign: 'center' }} />
   <Stack.Screen
     name="Home"
     component={Home}
-    options={{ headerTitleAlign: 'center' }}
+    options={{
+      headerTitleAlign: 'center',
+      headerBackVisible: false,
+      gestureEnabled: false,
+    }}
   />
 </Stack.Navigator>
+
 
       </NavigationContainer>
     </SafeAreaProvider>

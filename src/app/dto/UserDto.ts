@@ -1,7 +1,6 @@
 export interface UserDto {
-    userId: string;
-    firstName: string;
-    lastName: string;
-    email: string;
-    
+  user_id: string;
+  first_name: string;
+  last_name: string;
+  email: string;
 }

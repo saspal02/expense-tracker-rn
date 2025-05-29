@@ -10,11 +10,18 @@ interface ExpenseProps {
 
 const Expense: React.FC<ExpenseProps> = ({props}) => {
   const formatDate = (date: Date) => {
-    return new Date(date).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-    });
+  const d = new Date(date);
+  const options: Intl.DateTimeFormatOptions = {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
   };
+  return d.toLocaleString('en-US', options);
+};
+
 
   return (
     <View style={styles.expenseContainer} key={props.key}>

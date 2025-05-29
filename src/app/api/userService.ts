@@ -20,7 +20,7 @@ class UserService {
       throw new Error('Failed to fetch user info');
     }
 
-    return await response.json(); // should return UserDto
+    return await response.json(); 
   }
 }
 

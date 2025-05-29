@@ -1,13 +1,13 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import Spends from './Spends';
-import ProfileHeader from './ProfileHeader';
+import Header from './Header';
 
 
 const Home = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
-        <ProfileHeader/>
+        <Header/>
       <View style={styles.container}>
         
         <View style={styles.spendsContainer}>
