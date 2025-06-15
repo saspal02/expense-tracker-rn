@@ -106,33 +106,25 @@ export default Spends;
 
 const styles = StyleSheet.create({
   expenses: {
-    marginTop: 2,
+    marginTop: 0,
   },
 });
 
 const headingBox = {
   mainBox: {
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     borderColor: 'black',
-    borderWidth: 1.6,
-    borderRadius: 10,
-    padding: 20,
-
-    // Shadow for iOS
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
-
-    // Elevation for Android
-    elevation: 5,
+    borderWidth: 2,
+  
   },
   shadowBox: {
-    backgroundColor: '#f8f8f8', // lighter gray for a softer feel
+    backgroundColor: 'blue',
     borderRadius: 10,
+   
   },
   styles: {
-    marginTop: 20,
+    marginTop: 5,
   },
-};
 
+  
+};

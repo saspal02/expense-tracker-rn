@@ -10,6 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import UserService from '../api/userService';
 import { UserDto } from '../dto/UserDto';
 import { useNavigation } from '@react-navigation/native';
+import CustomText from '../components/CustomText';
 
 interface ProfileProps {
   closeModal: () => void;
@@ -43,8 +44,8 @@ const Profile: React.FC<ProfileProps> = ({ closeModal }) => {
     <View style={styles.modalContent}>
       {user ? (
         <>
-          <Text style={{ letterSpacing: -1 }}> {user.first_name} {user.last_name}</Text>
-          <Text style={styles.emailText}>{user.email}</Text>
+          <CustomText style={{ letterSpacing: -1 }}> {user.first_name} {user.last_name}</CustomText>
+          <CustomText style={styles.emailText}>{user.email}</CustomText>
         </>
       ) : (
         <Text>Loading...</Text>
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
     flex: 1,
     textAlign: 'center',
-    color: '#333',
+    color: '#black',
   },
   emailText: {
     fontSize: 14,

@@ -22,7 +22,6 @@ const Expense: React.FC<ExpenseProps> = ({props}) => {
   return d.toLocaleString('en-US', options);
 };
 
-
   return (
     <View style={styles.expenseContainer} key={props.key}>
       <View style={styles.leftContent}>
@@ -57,14 +56,13 @@ const styles = StyleSheet.create({
     marginVertical: theme.spacing.xs,
     ...Platform.select({
       ios: {
-       
-      },
-      android: {
-        elevation: 4,
         shadowColor: theme.colors.effects.shadow.medium.color,
         shadowOffset: theme.colors.effects.shadow.medium.offset,
         shadowOpacity: theme.colors.effects.shadow.medium.opacity,
         shadowRadius: theme.colors.effects.shadow.medium.radius,
+      },
+      android: {
+        elevation: 4,
       },
     }),
     borderWidth: 1,
@@ -88,11 +86,6 @@ const styles = StyleSheet.create({
       },
       android: {
         elevation: 2,
-        shadowColor: theme.colors.effects.shadow.light.color,
-        shadowOffset: theme.colors.effects.shadow.light.offset,
-        shadowOpacity: theme.colors.effects.shadow.light.opacity,
-        shadowRadius: theme.colors.effects.shadow.light.radius,
-        
       },
     }),
   },

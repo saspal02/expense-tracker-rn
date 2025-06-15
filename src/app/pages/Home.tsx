@@ -4,6 +4,7 @@ import Spends from './Spends';
 import Header from './Header';
 
 
+
 const Home = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -15,6 +16,7 @@ const Home = () => {
         </View>
       </View>
     </SafeAreaView>
+  
   );
 };
 

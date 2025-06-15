@@ -17,7 +17,7 @@ const Header = () => {
     <View style={styles.header}>
       <Image source={require('/assets/logo.png')} style={styles.logo} resizeMode="contain" />
 
-      <Text style={styles.title}>Xpense AI</Text>
+      <Text style={styles.title}>EaseExpense AI</Text>
 
       <TouchableOpacity onPress={() => setModalVisible(true)}>
         <Image source={require('/assets/avatar.png')} style={styles.profile} resizeMode="cover" />
@@ -25,7 +25,6 @@ const Header = () => {
 
       <Modal transparent visible={modalVisible} animationType="fade">
         <Pressable style={styles.overlay} onPress={() => setModalVisible(false)}>
-          {/* Clicking outside modal closes it */}
         </Pressable>
         <Profile closeModal={() => setModalVisible(false)} />
       </Modal>
