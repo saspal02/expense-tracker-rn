@@ -28,10 +28,7 @@ npm run android
 ## Step 3: Run your app
 
 
+https://github.com/user-attachments/assets/6f8f0e0e-6300-4014-87ab-8b6a29061d65
 
 
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
 
